@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - DSI Trésor Mali</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #123c69, #2563a6);
+        }
+
+        .connexion {
+            background: white;
+            width: 100%;
+            max-width: 410px;
+            margin: 20px;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px #00000030;
+        }
+
+        h1 {
+            text-align: center;
+            color: #123c69;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .sous-titre {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 28px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline: 2px solid #93c5fd;
+            border-color: #2563eb;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #123c69;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4f91;
+        }
+
+        .pied {
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 24px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="connexion">
+        <h1>DSI Trésor Mali</h1>
+
+        <p class="sous-titre">
+            Connectez-vous à votre espace
+        </p>
+
+        <form action="login.php" method="POST">
+            <label for="nom_utilisateur">
+                Nom d'utilisateur
+            </label>
+
+            <input
+                type="text"
+                id="nom_utilisateur"
+                name="nom_utilisateur"
+                placeholder="Votre nom d'utilisateur"
+                autocomplete="username"
+                required
+            >
+
+            <label for="mot_de_passe">
+                Mot de passe
+            </label>
+
+            <input
+                type="password"
+                id="mot_de_passe"
+                name="mot_de_passe"
+                placeholder="Votre mot de passe"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit">
+                Se connecter
+            </button>
+        </form>
+
+        <p class="pied">
+            DSI Trésor Mali — Accès réservé aux utilisateurs autorisés
+        </p>
+    </main>
+
+</body>
+</html>
